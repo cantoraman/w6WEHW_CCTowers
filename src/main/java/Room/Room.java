@@ -1,17 +1,19 @@
 package Room;
 import Hotel.Guest;
-
+import java.lang.reflect.Array;
 import java.util.ArrayList;
 
 public abstract class Room {
 
     private int capacity;
+    protected ArrayList<Guest> guestsIn;
 
-    public void room(int capacity) {
-
+    public Room(int capacity) {
         this.capacity = capacity;
-
+        guestsIn = new ArrayList<>();
     }
+
+
 
     public int getCapacity() {
         return capacity;
@@ -21,5 +23,10 @@ public abstract class Room {
         this.capacity = newCapacity;
     }
 
-    public abstract void checkInGuest(ArrayList<Guest> guestsToCheckIn);
+
+    public int getCheckedInCapacity(){
+        return guestsIn.size();
+    }
+
+
 }

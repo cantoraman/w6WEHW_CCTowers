@@ -1,4 +1,5 @@
 package Room;
+
 import Hotel.Guest;
 
 import java.util.ArrayList;
@@ -6,10 +7,13 @@ import java.util.ArrayList;
 public class Bedroom extends Room {
 
     private boolean isbooked;
+    private int bookingLength;
     private RoomType roomType;
+    private int roomNumber;
 
-    public Bedroom(int capacity, boolean booked, RoomType roomType) {
-        super();
+    public Bedroom(int capacity, int roomNumber, boolean booked, RoomType roomType) {
+        super(capacity);
+        this.roomNumber = roomNumber;
         this.isbooked = booked;
         this.roomType = roomType;
     }
@@ -22,8 +26,20 @@ public class Bedroom extends Room {
         this.roomType = newRoomType;
     }
 
-    @Override
-    public void checkInGuest(ArrayList<Guest> guestsToCheckIn){
 
+    public void checkInGuest(ArrayList<Guest> guestsToCheckIn, int lengthOfStay) {
+        if (guestsToCheckIn.size() <= getCapacity()) {
+            //possible room payment spot
+            for (Guest guest : guestsToCheckIn) {
+                guest.setRoomNumber(roomNumber);
+                guestsIn.add(guest);
+            }
+
+
+            bookingLength = lengthOfStay;
+            this.isbooked=true;
+        }
     }
+
+
 }

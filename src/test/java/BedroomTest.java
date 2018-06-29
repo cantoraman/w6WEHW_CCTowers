@@ -16,7 +16,7 @@ public class BedroomTest {
 
     @Before
     public void setup() {
-        bedroom = new Bedroom(4, false, RoomType.Single);
+        bedroom = new Bedroom(4, 101, false, RoomType.Single);
         guest= new Guest ("John Doe", "Shellfish");
         guestsToCheckIn= new ArrayList<Guest>();
         guestsToCheckIn.add(guest);
@@ -37,8 +37,8 @@ public class BedroomTest {
 
     @Test
     public void canCheckInGuests(){
-       bedroom.checkInGuest(guestsToCheckIn);
-
+       bedroom.checkInGuest(guestsToCheckIn,3);
+        assertEquals(1, bedroom.getCheckedInCapacity());
     }
 
 
