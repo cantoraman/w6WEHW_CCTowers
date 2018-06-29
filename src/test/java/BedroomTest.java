@@ -42,8 +42,13 @@ public class BedroomTest {
     }
 
     @Test
-    public void hasEnumSpecifiedCapacity(){
-        assertEquals(2, bedroom.getCapacity());
+    public void canCheckOutGuests(){
+        bedroom.checkInGuest(guestsToCheckIn,3);
+        System.out.println(bedroom.getGuestsIn());
+        ArrayList<Guest> checkedoutguests = bedroom.checkOutGuests();
+        System.out.println(checkedoutguests);
+        assertEquals(0, bedroom.getCheckedInCapacity());
     }
+
 
 }

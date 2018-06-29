@@ -17,4 +17,7 @@ public class Guest {
         this.roomNumber = roomNumber;
     }
 
+    public int getRoomNumber() {
+        return this.roomNumber;
+    }
 }
