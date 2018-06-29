@@ -44,29 +44,18 @@ public class Bedroom extends Room {
     public ArrayList<Guest> checkOutGuests() {
         this.isbooked = false;
         bookingLength = 0;
-        ArrayList<Guest> checkingout = new ArrayList<>();
+        ArrayList<Guest> checkingOut = new ArrayList<>();
 
-//        for (Guest guest : guestsIn){
-//            System.out.println(guestsIn.size());
-//            System.out.println(guest);
-//            guest.setRoomNumber(0);
-//
-//            checkingout.add(guest);
-//            guestsIn.remove(guest);
-//
-//
-//            System.out.println(checkingout);
-//        }
 
-        for(int i = 0; i < guestsIn.size(); i++){
-            guestsIn.get(i).setRoomNumber(0);
-            checkingout.add(guestsIn.get(i));
-            guestsIn.remove(i);
+        for(int i = guestsIn.size(); i > 0; i--){
+            guestsIn.get(i-1).setRoomNumber(0);
+            checkingOut.add(guestsIn.get(i-1));
+            guestsIn.remove(i-1);
 
         }
 
 
-         return checkingout;
+         return checkingOut;
     }
 
     public ArrayList<Guest> getGuestsIn() {

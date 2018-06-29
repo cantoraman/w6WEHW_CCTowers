@@ -12,14 +12,18 @@ public class BedroomTest {
 
     Bedroom bedroom;
     Guest guest;
+    Guest guest2;
     ArrayList<Guest> guestsToCheckIn;
 
     @Before
     public void setup() {
         bedroom = new Bedroom(101, false, RoomType.Double);
         guest= new Guest ("John Doe", "Shellfish");
+        guest2= new Guest ("Jane Doe", "Dairy");
         guestsToCheckIn= new ArrayList<Guest>();
         guestsToCheckIn.add(guest);
+        guestsToCheckIn.add(guest2);
+
     }
 
 
@@ -44,9 +48,7 @@ public class BedroomTest {
     @Test
     public void canCheckOutGuests(){
         bedroom.checkInGuest(guestsToCheckIn,3);
-        System.out.println(bedroom.getGuestsIn());
-        ArrayList<Guest> checkedoutguests = bedroom.checkOutGuests();
-        System.out.println(checkedoutguests);
+        ArrayList<Guest> checkedOutGuests = bedroom.checkOutGuests();
         assertEquals(0, bedroom.getCheckedInCapacity());
     }
 
