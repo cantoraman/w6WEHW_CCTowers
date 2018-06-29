@@ -24,4 +24,10 @@ public class BedroomTest {
         assertEquals(5, bedroom.getCapacity());
     }
 
+    @Test
+    public void canChangeRoomType(){
+        bedroom.setRoomType(RoomType.Suite);
+        assertEquals(RoomType.Suite, bedroom.getRoomType());
+    }
+
 }
