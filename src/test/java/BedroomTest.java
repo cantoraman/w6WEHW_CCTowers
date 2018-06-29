@@ -1,20 +1,25 @@
+import Hotel.Guest;
 import Room.Bedroom;
 import Room.RoomType;
 import org.junit.Before;
 import org.junit.Test;
+
+import java.util.ArrayList;
 
 import static org.junit.Assert.assertEquals;
 
 public class BedroomTest {
 
     Bedroom bedroom;
-
+    Guest guest;
+    ArrayList<Guest> guestsToCheckIn;
 
     @Before
     public void setup() {
-
         bedroom = new Bedroom(4, false, RoomType.Single);
-
+        guest= new Guest ("John Doe", "Shellfish");
+        guestsToCheckIn= new ArrayList<Guest>();
+        guestsToCheckIn.add(guest);
     }
 
 
@@ -29,5 +34,12 @@ public class BedroomTest {
         bedroom.setRoomType(RoomType.Suite);
         assertEquals(RoomType.Suite, bedroom.getRoomType());
     }
+
+    @Test
+    public void canCheckInGuests(){
+       bedroom.checkInGuest(guestsToCheckIn);
+
+    }
+
 
 }

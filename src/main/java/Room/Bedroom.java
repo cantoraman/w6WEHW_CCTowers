@@ -1,4 +1,7 @@
 package Room;
+import Hotel.Guest;
+
+import java.util.ArrayList;
 
 public class Bedroom extends Room {
 
@@ -17,5 +20,10 @@ public class Bedroom extends Room {
 
     public void setRoomType(RoomType newRoomType) {
         this.roomType = newRoomType;
+    }
+
+    @Override
+    public void checkInGuest(ArrayList<Guest> guestsToCheckIn){
+
     }
 }

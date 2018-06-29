@@ -1,4 +1,7 @@
 package Room;
+import Hotel.Guest;
+
+import java.util.ArrayList;
 
 public abstract class Room {
 
@@ -18,4 +21,5 @@ public abstract class Room {
         this.capacity = newCapacity;
     }
 
+    public abstract void checkInGuest(ArrayList<Guest> guestsToCheckIn);
 }
