@@ -16,7 +16,7 @@ public class BedroomTest {
 
     @Before
     public void setup() {
-        bedroom = new Bedroom(4, 101, false, RoomType.Single);
+        bedroom = new Bedroom(101, false, RoomType.Double);
         guest= new Guest ("John Doe", "Shellfish");
         guestsToCheckIn= new ArrayList<Guest>();
         guestsToCheckIn.add(guest);
@@ -41,5 +41,9 @@ public class BedroomTest {
         assertEquals(1, bedroom.getCheckedInCapacity());
     }
 
+    @Test
+    public void hasEnumSpecifiedCapacity(){
+        assertEquals(2, bedroom.getCapacity());
+    }
 
 }

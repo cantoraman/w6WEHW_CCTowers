@@ -11,8 +11,9 @@ public class Bedroom extends Room {
     private RoomType roomType;
     private int roomNumber;
 
-    public Bedroom(int capacity, int roomNumber, boolean booked, RoomType roomType) {
-        super(capacity);
+    public Bedroom(int roomNumber, boolean booked, RoomType roomType) {
+        super();
+        this.setCapacity(roomType.getValue());
         this.roomNumber = roomNumber;
         this.isbooked = booked;
         this.roomType = roomType;
@@ -28,14 +29,12 @@ public class Bedroom extends Room {
 
 
     public void checkInGuest(ArrayList<Guest> guestsToCheckIn, int lengthOfStay) {
-        if (guestsToCheckIn.size() <= getCapacity()) {
+        if (guestsToCheckIn.size() <= getCapacity() && isbooked==false) {
             //possible room payment spot
             for (Guest guest : guestsToCheckIn) {
                 guest.setRoomNumber(roomNumber);
                 guestsIn.add(guest);
             }
-
-
             bookingLength = lengthOfStay;
             this.isbooked=true;
         }

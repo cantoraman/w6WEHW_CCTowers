@@ -8,8 +8,7 @@ public abstract class Room {
     private int capacity;
     protected ArrayList<Guest> guestsIn;
 
-    public Room(int capacity) {
-        this.capacity = capacity;
+    public Room() {
         guestsIn = new ArrayList<>();
     }
 

@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e8b61854-d7d3-4e2f-82b3-f91cf5ee449b" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/src/main/java/Hotel/Guest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Hotel/Guest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Room/Bedroom.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Room/Bedroom.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Room/Room.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Room/Room.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/BedroomTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/BedroomTest.java" afterDir="false" />
@@ -27,20 +26,13 @@
       <file leaf-file-name="BedroomTest.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/java/BedroomTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="326">
-              <caret line="39" selection-start-line="39" selection-end-line="39" />
+            <state relative-caret-position="270">
+              <caret line="18" column="30" lean-forward="true" selection-start-line="18" selection-start-column="30" selection-end-line="18" selection-end-column="30" />
               <folding>
                 <element signature="imports" expanded="true" />
+                <element signature="e#1046#1047#0" expanded="true" />
+                <element signature="e#1076#1077#0" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ReflectiveCallable.java" pinned="false" current-in-tab="false">
-        <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/junit/junit/4.12/a6c32b40bf3d76eca54e3c601e5d1470c86fcdfa/junit-4.12-sources.jar!/org/junit/internal/runners/model/ReflectiveCallable.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="195">
-              <caret line="13" selection-start-line="13" selection-end-line="13" />
             </state>
           </provider>
         </entry>
@@ -72,13 +64,15 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Room.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Room.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/Room/Room.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="120">
-              <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
+            <state relative-caret-position="117">
+              <caret line="9" lean-forward="true" selection-start-line="9" selection-end-line="9" />
               <folding>
                 <element signature="imports" expanded="true" />
+                <element signature="e#211#212#0" expanded="true" />
+                <element signature="e#255#256#0" expanded="true" />
                 <element signature="e#181#182#0" expanded="true" />
                 <element signature="e#212#213#0" expanded="true" />
                 <element signature="e#260#261#0" expanded="true" />
@@ -90,11 +84,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Bedroom.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="Bedroom.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/Room/Bedroom.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="366">
-              <caret line="34" selection-start-line="34" selection-end-line="34" />
+            <state relative-caret-position="375">
+              <caret line="39" column="9" lean-forward="true" selection-start-line="39" selection-start-column="9" selection-end-line="39" selection-end-column="9" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#308#309#0" expanded="true" />
@@ -420,9 +414,9 @@
         <option value="$PROJECT_DIR$/src/main/java/Room/RoomType.java" />
         <option value="$PROJECT_DIR$/src/main/java/Guest.java" />
         <option value="$PROJECT_DIR$/src/main/java/Hotel/Guest.java" />
+        <option value="$PROJECT_DIR$/src/main/java/Room/Room.java" />
         <option value="$PROJECT_DIR$/src/test/java/BedroomTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/Room/Bedroom.java" />
-        <option value="$PROJECT_DIR$/src/main/java/Room/Room.java" />
       </list>
     </option>
   </component>
@@ -518,7 +512,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.BedroomTest.canCheckInGuests">
+  <component name="RunManager" selected="JUnit.BedroomTest">
     <configuration default="true" type="Application" factoryName="Application">
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
     </configuration>
@@ -590,6 +584,23 @@
       </option>
       <patterns />
     </configuration>
+    <configuration name="BedroomTest.hasEnumSpecifiedCapacity" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="CodeClanTowers_test" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="BedroomTest" />
+      <option name="METHOD_NAME" value="hasEnumSpecifiedCapacity" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <patterns />
+    </configuration>
     <configuration default="true" type="JUnit" factoryName="JUnit">
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
@@ -633,13 +644,15 @@
       <item itemvalue="JUnit.BedroomTest.canChangeRoomType" />
       <item itemvalue="JUnit.BedroomTest.canCheckInGuests" />
       <item itemvalue="JUnit.BedroomTest" />
+      <item itemvalue="JUnit.BedroomTest.hasEnumSpecifiedCapacity" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.BedroomTest.canCheckInGuests" />
         <item itemvalue="JUnit.BedroomTest" />
-        <item itemvalue="JUnit.BedroomTest.canChangeRoomType" />
         <item itemvalue="JUnit.BedroomTest.canChangeCapacity" />
+        <item itemvalue="JUnit.BedroomTest.hasEnumSpecifiedCapacity" />
+        <item itemvalue="JUnit.BedroomTest.canCheckInGuests" />
+        <item itemvalue="JUnit.BedroomTest.canChangeRoomType" />
       </list>
     </recent_temporary>
   </component>
@@ -657,35 +670,35 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="BedroomTest_canCheckInGuests - 2018.06.29 at 14h 22m 19s.xml">
-      <configuration name="BedroomTest.canCheckInGuests" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="BedroomTest_canCheckInGuests - 2018.06.29 at 14h 23m 18s.xml">
-      <configuration name="BedroomTest.canCheckInGuests" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="BedroomTest_canCheckInGuests - 2018.06.29 at 14h 25m 04s.xml">
-      <configuration name="BedroomTest.canCheckInGuests" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="BedroomTest_canCheckInGuests - 2018.06.29 at 14h 25m 12s.xml">
-      <configuration name="BedroomTest.canCheckInGuests" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="BedroomTest - 2018.06.29 at 14h 32m 06s.xml">
-      <configuration name="BedroomTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="BedroomTest_canCheckInGuests - 2018.06.29 at 14h 35m 05s.xml">
-      <configuration name="BedroomTest.canCheckInGuests" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="BedroomTest_canCheckInGuests - 2018.06.29 at 14h 35m 38s.xml">
-      <configuration name="BedroomTest.canCheckInGuests" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="BedroomTest_canCheckInGuests - 2018.06.29 at 14h 35m 49s.xml">
-      <configuration name="BedroomTest.canCheckInGuests" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="BedroomTest_canCheckInGuests - 2018.06.29 at 14h 42m 12s.xml">
-      <configuration name="BedroomTest.canCheckInGuests" configurationId="JUnit" />
-    </history-entry>
     <history-entry file="BedroomTest_canCheckInGuests - 2018.06.29 at 14h 42m 19s.xml">
       <configuration name="BedroomTest.canCheckInGuests" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="BedroomTest_canCheckInGuests - 2018.06.29 at 14h 43m 22s.xml">
+      <configuration name="BedroomTest.canCheckInGuests" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="BedroomTest_canChangeCapacity - 2018.06.29 at 14h 49m 30s.xml">
+      <configuration name="BedroomTest.canChangeCapacity" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="BedroomTest_canChangeCapacity - 2018.06.29 at 14h 49m 35s.xml">
+      <configuration name="BedroomTest.canChangeCapacity" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="BedroomTest_hasEnumSpecifiedCapacity - 2018.06.29 at 14h 50m 25s.xml">
+      <configuration name="BedroomTest.hasEnumSpecifiedCapacity" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="BedroomTest_hasEnumSpecifiedCapacity - 2018.06.29 at 14h 50m 33s.xml">
+      <configuration name="BedroomTest.hasEnumSpecifiedCapacity" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="BedroomTest_canChangeCapacity - 2018.06.29 at 14h 50m 41s.xml">
+      <configuration name="BedroomTest.canChangeCapacity" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="BedroomTest - 2018.06.29 at 14h 52m 28s.xml">
+      <configuration name="BedroomTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="BedroomTest_canCheckInGuests - 2018.06.29 at 14h 52m 34s.xml">
+      <configuration name="BedroomTest.canCheckInGuests" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="BedroomTest - 2018.06.29 at 14h 52m 42s.xml">
+      <configuration name="BedroomTest" configurationId="JUnit" />
     </history-entry>
   </component>
   <component name="ToolWindowManager">
@@ -757,14 +770,6 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/test/java/BedroomTest.java</url>
-          <line>39</line>
-          <properties />
-          <option name="timeStamp" value="2" />
-        </line-breakpoint>
-      </breakpoints>
       <option name="time" value="3" />
     </breakpoint-manager>
   </component>
@@ -799,13 +804,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/junit/junit/4.12/a6c32b40bf3d76eca54e3c601e5d1470c86fcdfa/junit-4.12-sources.jar!/org/junit/internal/runners/model/ReflectiveCallable.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="13" selection-start-line="13" selection-end-line="13" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/Hotel/Guest.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="105">
@@ -817,42 +815,53 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/BedroomTest.java">
+    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/junit/junit/4.12/a6c32b40bf3d76eca54e3c601e5d1470c86fcdfa/junit-4.12-sources.jar!/org/junit/internal/runners/model/ReflectiveCallable.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="326">
-          <caret line="39" selection-start-line="39" selection-end-line="39" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Room/Bedroom.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="366">
-          <caret line="34" selection-start-line="34" selection-end-line="34" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#308#309#0" expanded="true" />
-            <element signature="e#334#335#0" expanded="true" />
-            <element signature="e#397#398#0" expanded="true" />
-            <element signature="e#440#441#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="195">
+          <caret line="13" selection-start-line="13" selection-end-line="13" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/Room/Room.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
+        <state relative-caret-position="117">
+          <caret line="9" lean-forward="true" selection-start-line="9" selection-end-line="9" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="e#211#212#0" expanded="true" />
+            <element signature="e#255#256#0" expanded="true" />
             <element signature="e#181#182#0" expanded="true" />
             <element signature="e#212#213#0" expanded="true" />
             <element signature="e#260#261#0" expanded="true" />
             <element signature="e#303#304#0" expanded="true" />
             <element signature="e#537#538#0" expanded="true" />
             <element signature="e#570#571#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/BedroomTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="18" column="30" lean-forward="true" selection-start-line="18" selection-start-column="30" selection-end-line="18" selection-end-column="30" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1046#1047#0" expanded="true" />
+            <element signature="e#1076#1077#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/Room/Bedroom.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="375">
+          <caret line="39" column="9" lean-forward="true" selection-start-line="39" selection-start-column="9" selection-end-line="39" selection-end-column="9" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#308#309#0" expanded="true" />
+            <element signature="e#334#335#0" expanded="true" />
+            <element signature="e#397#398#0" expanded="true" />
+            <element signature="e#440#441#0" expanded="true" />
           </folding>
         </state>
       </provider>
