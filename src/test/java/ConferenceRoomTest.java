@@ -36,7 +36,10 @@ public class ConferenceRoomTest {
 
     }
 
-
+    @Test
+    public void hasRate(){
+        assertEquals(20, conferenceRoom.getRate());
+    }
 
 
 

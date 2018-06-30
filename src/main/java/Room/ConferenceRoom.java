@@ -28,5 +28,9 @@ public class ConferenceRoom extends Room{
     public int getBookingLength() {
         return this.bookingLength;
     }
+
+    public int getRate() {
+        return this.rate;
+    }
 }
 
