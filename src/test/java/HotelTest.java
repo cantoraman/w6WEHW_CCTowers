@@ -47,6 +47,14 @@ public class HotelTest {
     public void hasBedrooms(){
         assertEquals(3, hotel.getBedroomCount());
     }
+    @Test
+    public void hasConferenceRooms(){
+        assertEquals(2, hotel.getConferenceRoomCount());
+    }
+    @Test
+    public void hasDiningRooms(){
+        assertEquals(2, hotel.getDiningRoomCount());
+    }
 
 
 }

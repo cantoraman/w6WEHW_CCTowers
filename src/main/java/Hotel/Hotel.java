@@ -27,6 +27,14 @@ public class Hotel {
     }
 
 
+    public int getConferenceRoomCount() {
+    return conferenceRooms.size();
+    }
+
+    public int getDiningRoomCount() {
+        return diningRooms.size();
+    }
+
 
 
 
