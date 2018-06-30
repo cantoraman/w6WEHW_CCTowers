@@ -46,5 +46,12 @@ public class DiningRoomTest {
         assertEquals(3, diningRoom.getCheckedInCapacity());
     }
 
+    @Test
+    public void canCheckInGuest__notEnoughRoom(){
+        diningRoom.setCapacity(2);
+        diningRoom.checkInGuests(guests);
+        assertEquals(0, diningRoom.getCheckedInCapacity());
+    }
+
 
 }
