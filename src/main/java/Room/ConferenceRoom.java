@@ -5,10 +5,12 @@ public class ConferenceRoom extends Room{
     private boolean isbooked;
     private int bookingLength;
     private String roomName;
+    private int rate;
 
-    public ConferenceRoom(int capacity, String roomName){
+    public ConferenceRoom(int capacity, String roomName, int rate){
         super(capacity);
         this.roomName = roomName;
+        this.rate = rate;
     }
 
 

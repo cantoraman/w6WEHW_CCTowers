@@ -12,11 +12,14 @@ public class ConferenceRoomTest {
     @Before
     public void setup()
     {
-        conferenceRoom = new ConferenceRoom( 50,"Savoy Court");
+        conferenceRoom = new ConferenceRoom( 50,"Savoy Court", 20);
 
     }
 
-
+    @Test
+    public void hasCapacity(){
+        assertEquals(50, conferenceRoom.getCapacity());
+    }
 
     @Test
     public void canBook__unbooked(){

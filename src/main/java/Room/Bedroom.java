@@ -10,17 +10,33 @@ public class Bedroom extends Room {
     private int bookingLength;
     private RoomType roomType;
     private int roomNumber;
+    private int rate;
 
-    public Bedroom(int capacity, int roomNumber, boolean booked, RoomType roomType) {
+    public Bedroom(int capacity, int roomNumber, boolean booked, RoomType roomType, int baseRate) {
         super(capacity);
         this.setCapacity(roomType.getValue());
         this.roomNumber = roomNumber;
         this.isbooked = booked;
         this.roomType = roomType;
+        this.rate=this.setRate(baseRate);
     }
+
+
 
     public RoomType getRoomType() {
         return this.roomType;
+    }
+
+    public int setRate(int baseRate){
+        switch(roomType){
+            case Suite:
+                return baseRate*4;
+            case Double:
+                return baseRate*2;
+            case Single:
+                return baseRate;
+        }
+        return baseRate;
     }
 
     public void setRoomType(RoomType newRoomType) {
@@ -62,5 +78,9 @@ public class Bedroom extends Room {
 
     public ArrayList<Guest> getGuestsIn() {
         return guestsIn;
+    }
+
+    public int getRate() {
+        return this.rate;
     }
 }
