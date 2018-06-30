@@ -11,8 +11,8 @@ public class Bedroom extends Room {
     private RoomType roomType;
     private int roomNumber;
 
-    public Bedroom(int roomNumber, boolean booked, RoomType roomType) {
-        super();
+    public Bedroom(int capacity, int roomNumber, boolean booked, RoomType roomType) {
+        super(capacity);
         this.setCapacity(roomType.getValue());
         this.roomNumber = roomNumber;
         this.isbooked = booked;

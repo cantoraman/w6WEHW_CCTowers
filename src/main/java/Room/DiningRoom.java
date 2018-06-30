@@ -9,8 +9,8 @@ public class DiningRoom extends Room {
     private String name;
     private Allergen allergen;
 
-    public DiningRoom(String name, Allergen allergen) {
-        super();
+    public DiningRoom(int capacity, String name, Allergen allergen) {
+        super(capacity);
         this.name = name;
         this.allergen = allergen;
     }

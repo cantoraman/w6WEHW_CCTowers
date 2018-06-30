@@ -18,7 +18,7 @@ public class BedroomTest {
 
     @Before
     public void setup() {
-        bedroom = new Bedroom(101, false, RoomType.Double);
+        bedroom = new Bedroom(2,101, false, RoomType.Double);
         guest= new Guest ("John Doe", Allergen.Shellfish);
         guest2= new Guest ("Jane Doe", Allergen.Dairy);
         guestsToCheckIn= new ArrayList<Guest>();

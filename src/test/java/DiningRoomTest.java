@@ -18,7 +18,7 @@ public class DiningRoomTest {
 
     @Before
     public void setup(){
-        diningRoom = new DiningRoom("Ocean Front", Allergen.Shellfish);
+        diningRoom = new DiningRoom( 50,"Ocean Front", Allergen.Shellfish);
         diningRoom.setCapacity(25);
         guests = new ArrayList<>();
         guest1= new Guest ("John Doe", Allergen.none);
