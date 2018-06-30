@@ -25,11 +25,21 @@ public class HotelTest {
     DiningRoom diningRoom1;
     DiningRoom diningRoom2;
 
+    ArrayList<Guest> guestGroup1;
+    ArrayList<Guest> guestGroup2;
+    Guest guest1;
+    Guest guest2;
+    Guest guest3;
+    Guest guest4;
+
+
     @Before
     public void setup(){
         bedrooms = new ArrayList<>();
         conferenceRooms = new ArrayList<>();
         diningRooms = new ArrayList<>();
+        guestGroup1 = new ArrayList<Guest>();
+        guestGroup2 = new ArrayList<Guest>();
         bedroom1=new Bedroom(1, 101, false, RoomType.Single, 30);
         bedroom2=new Bedroom(1, 102, false, RoomType.Double, 30);
         bedroom3=new Bedroom(1, 103, false, RoomType.Suite, 30);
@@ -40,7 +50,15 @@ public class HotelTest {
         diningRoom1 = new DiningRoom(10, "Ocean Front", Allergen.Shellfish);
         diningRoom2 = new DiningRoom(5 , "Maison Blanc", Allergen.Dairy);
         Collections.addAll(diningRooms, diningRoom1,diningRoom2);
+        guest1 = new Guest("John Doe", Allergen.Shellfish);
+        guest2 = new Guest("Jane Doe", Allergen.Dairy);
+        guest3 = new Guest("Bob Smith", Allergen.Gluten);
+        guest4 = new Guest("Sarah Smith", Allergen.none);
+        Collections.addAll(guestGroup1, guest1, guest2);
+        Collections.addAll(guestGroup2, guest3, guest4);
         hotel = new Hotel (bedrooms, conferenceRooms, diningRooms);
+
+
     }
 
     @Test
@@ -56,5 +74,24 @@ public class HotelTest {
         assertEquals(2, hotel.getDiningRoomCount());
     }
 
+    @Test
+    public void canCheckInGuests_toAvailableRooms(){
+        hotel.checkGuestToBedroom(guestGroup1,102, 3);
+        assertEquals(2, hotel.getGuestNumberInBedroom(102));
+    }
+
+    @Test
+    public void canCheckInGuests_toNonAvailableRooms() {
+        hotel.checkGuestToBedroom(guestGroup1, 101, 3);
+        assertEquals(0, hotel.getGuestNumberInBedroom(101));
+    }
+
+
+
+
+    @Test
+    public void canCheckInGuests_toRoomsToDiningRoomCheckGuestOutCheckInDiningRoom(){
+
+    }
 
 }

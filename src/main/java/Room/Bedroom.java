@@ -83,4 +83,12 @@ public class Bedroom extends Room {
     public int getRate() {
         return this.rate;
     }
+
+    public boolean isRoomBooked() {
+        return isbooked;
+    }
+
+    public int getRoomNumber() {
+        return roomNumber;
+    }
 }

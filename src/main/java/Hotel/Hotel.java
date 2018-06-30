@@ -36,6 +36,28 @@ public class Hotel {
     }
 
 
+    public void checkGuestToBedroom(ArrayList<Guest> guests, int roomNumber, int nights) {
+        for (Bedroom bedroom : bedrooms)
+        {
+            if(bedroom.getRoomNumber() == roomNumber)
+                if (!bedroom.isRoomBooked())
+                    if (bedroom.getCapacity()>=guests.size()) {
+                        bedroom.checkInGuest(guests, nights);
+                    }
+                    else
+                        System.out.println("Boarding is over capacity of this room. Please choose a larger room.");
+            else
+                    System.out.println("The room is already booked, please try another room.");
 
+        }
 
+    }
+
+    public int getGuestNumberInBedroom(int roomNumber) {
+        for (Bedroom bedroom : bedrooms)
+            if(bedroom.getRoomNumber() == roomNumber)
+                return bedroom.getCheckedInCapacity();
+        return 0;
+
+    }
 }
