@@ -4,5 +4,6 @@ public enum Allergen {
     Shellfish,
     Dairy,
     Soy,
-    Gluten
+    Gluten,
+    none
 }

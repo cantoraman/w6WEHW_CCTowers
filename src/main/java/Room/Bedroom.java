@@ -38,6 +38,8 @@ public class Bedroom extends Room {
             bookingLength = lengthOfStay;
             this.isbooked = true;
         }
+        else
+            System.out.println("THE ROOM IS FULL, PLEASE CHOOSE ANOTHER ROOM");
     }
 
 

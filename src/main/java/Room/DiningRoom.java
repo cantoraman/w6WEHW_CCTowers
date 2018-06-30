@@ -1,12 +1,16 @@
 package Room;
 
-public class DiningRoom {
+import Hotel.Guest;
+
+import java.util.ArrayList;
+
+public class DiningRoom extends Room {
 
     private String name;
     private Allergen allergen;
 
     public DiningRoom(String name, Allergen allergen) {
-
+        super();
         this.name = name;
         this.allergen = allergen;
     }
@@ -22,5 +26,20 @@ public class DiningRoom {
 
     public Allergen getAllergen() {
         return allergen;
+    }
+
+    public void checkInGuests(ArrayList<Guest> guestsToCheckIn) {
+        if (guestsToCheckIn.size() <= getCapacity()) {
+
+            for (Guest guest : guestsToCheckIn) {
+
+                if (allergen == guest.getAllergies())
+                    System.out.println("Please watch out for allergens: " + allergen);
+
+                guestsIn.add(guest);
+            }
+
+        } else
+            System.out.println("SEATING INSIDE IS NOT ENOUGH FOR A GROUP OF "+guestsToCheckIn.size()+" PLEASE CHOOSE ANOTHER DINING ROOM");
     }
 }

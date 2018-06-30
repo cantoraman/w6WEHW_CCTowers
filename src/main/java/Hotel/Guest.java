@@ -1,12 +1,14 @@
 package Hotel;
 
+import Room.Allergen;
+
 public class Guest {
 
     private String name;
-    private String allergies;
+    private Allergen allergies;
     private int roomNumber;
 
-    public Guest(String name, String allergies) {
+    public Guest(String name, Allergen allergies) {
 
         this.name = name;
         this.allergies = allergies;
@@ -19,5 +21,9 @@ public class Guest {
 
     public int getRoomNumber() {
         return this.roomNumber;
+    }
+
+    public Allergen getAllergies() {
+        return this.allergies;
     }
 }

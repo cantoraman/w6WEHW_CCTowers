@@ -1,4 +1,5 @@
 import Hotel.Guest;
+import Room.Allergen;
 import Room.Bedroom;
 import Room.RoomType;
 import org.junit.Before;
@@ -18,8 +19,8 @@ public class BedroomTest {
     @Before
     public void setup() {
         bedroom = new Bedroom(101, false, RoomType.Double);
-        guest= new Guest ("John Doe", "Shellfish");
-        guest2= new Guest ("Jane Doe", "Dairy");
+        guest= new Guest ("John Doe", Allergen.Shellfish);
+        guest2= new Guest ("Jane Doe", Allergen.Dairy);
         guestsToCheckIn= new ArrayList<Guest>();
         guestsToCheckIn.add(guest);
         guestsToCheckIn.add(guest2);
