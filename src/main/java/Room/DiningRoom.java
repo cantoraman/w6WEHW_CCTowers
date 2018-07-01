@@ -30,7 +30,7 @@ public class DiningRoom extends Room {
     }
 
     public void checkInGuests(ArrayList<Guest> guestsToCheckIn) {
-        if (guestsToCheckIn.size() <= getCapacity()) {
+        if (guestsToCheckIn.size() + this.getCheckedInCapacity() <= getCapacity()) {
 
             for (Guest guest : guestsToCheckIn) {
 
@@ -41,6 +41,6 @@ public class DiningRoom extends Room {
             }
 
         } else
-            System.out.println("SEATING INSIDE IS NOT ENOUGH FOR A GROUP OF "+guestsToCheckIn.size()+" PLEASE CHOOSE ANOTHER DINING ROOM");
+            System.out.println("SEATING INSIDE IS NOT ENOUGH FOR A GROUP OF " + guestsToCheckIn.size() + " PLEASE CHOOSE ANOTHER DINING ROOM");
     }
 }

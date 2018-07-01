@@ -75,17 +75,35 @@ public class HotelTest {
     }
 
     @Test
-    public void canCheckInGuests_toAvailableRooms(){
-        hotel.checkGuestToBedroom(guestGroup1,102, 3);
+    public void canCheckInGuests__toAvailableBedrooms(){
+        hotel.checkGuestsToBedroom(guestGroup1,102, 3);
         assertEquals(2, hotel.getGuestNumberInBedroom(102));
     }
 
     @Test
-    public void canCheckInGuests_toNonAvailableRooms() {
-        hotel.checkGuestToBedroom(guestGroup1, 101, 3);
+    public void canCheckInGuests__toNonAvailableBedrooms() {
+        hotel.checkGuestsToBedroom(guestGroup1, 101, 3);
         assertEquals(0, hotel.getGuestNumberInBedroom(101));
     }
 
+    @Test
+    public void canCheckInGuests__toAvailableDiningRooms() {
+        hotel.checkGuestsToDiningRoom(guestGroup1, "Ocean Front");
+        assertEquals(2, hotel.getDiningRoomSpace("Ocean Front"));
+    }
+
+    @Test
+    public void canCheckInGuests__toNonAvailableDiningRooms() {
+        diningRoom1.setCapacity(3);
+        hotel.checkGuestsToDiningRoom(guestGroup1, "Ocean Front");
+        hotel.checkGuestsToDiningRoom(guestGroup2, "Ocean Front");
+        assertEquals(0, hotel.getGuestNumberInBedroom(101));
+    }
+
+    @Test
+    public void canBookAConferenceRoom(){
+
+    }
 
 
 
