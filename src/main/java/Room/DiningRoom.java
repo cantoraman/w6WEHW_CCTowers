@@ -3,8 +3,10 @@ package Room;
 import Hotel.Guest;
 
 import java.util.ArrayList;
+import java.util.Collection;
 
 public class DiningRoom extends Room {
+
 
     private String name;
     private Allergen allergen;

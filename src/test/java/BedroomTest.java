@@ -49,7 +49,7 @@ public class BedroomTest {
     @Test
     public void canCheckOutGuests(){
         bedroom.checkInGuest(guestsToCheckIn,3);
-        ArrayList<Guest> checkedOutGuests = bedroom.checkOutGuests();
+        bedroom.checkOutAllGuests();
         assertEquals(0, bedroom.getCheckedInCapacity());
     }
 

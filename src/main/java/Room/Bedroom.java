@@ -59,17 +59,15 @@ public class Bedroom extends Room {
     }
 
     @Override
-    public ArrayList<Guest> checkOutGuests() {
+    public ArrayList<Guest> checkOutAllGuests() {
         this.isbooked = false;
         bookingLength = 0;
         ArrayList<Guest> checkingOut = new ArrayList<>();
-
 
         for(int i = guestsIn.size(); i > 0; i--){
             guestsIn.get(i-1).setRoomNumber(0);
             checkingOut.add(guestsIn.get(i-1));
             guestsIn.remove(i-1);
-
         }
 
 

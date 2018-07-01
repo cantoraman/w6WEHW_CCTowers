@@ -90,6 +90,14 @@ public class Hotel {
     public void checkGuestsOutFromBedroom(int roomNumber) {
         for (Bedroom bedroom : bedrooms)
             if(bedroom.getRoomNumber() == roomNumber)
-                bedroom.checkOutGuests();
+                bedroom.checkOutAllGuests();
+    }
+
+
+    public void checkGuestOutFromDiningRoom(String diningRoomName, Guest guest) {
+        for (DiningRoom diningRoom : diningRooms) {
+            if (diningRoom.getName() == diningRoomName && diningRoom.getGuestsIn().contains(guest))
+                diningRoom.checkOutGuestByName(guest);
+        }
     }
 }

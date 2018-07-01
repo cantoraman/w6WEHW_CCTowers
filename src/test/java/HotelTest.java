@@ -97,7 +97,7 @@ public class HotelTest {
         diningRoom1.setCapacity(3);
         hotel.checkGuestsToDiningRoom(guestGroup1, "Ocean Front");
         hotel.checkGuestsToDiningRoom(guestGroup2, "Ocean Front");
-        assertEquals(0, hotel.getGuestNumberInBedroom(101));
+        assertEquals(2, hotel.getDiningRoomSpace("Ocean Front"));
     }
 
     @Test
@@ -120,6 +120,14 @@ public class HotelTest {
         hotel.checkGuestsToBedroom(guestGroup1,102, 3);
         hotel.checkGuestsOutFromBedroom(102);
         assertEquals(0, hotel.getGuestNumberInBedroom(102));
+    }
+
+    @Test
+    public void canCheckOutGuestsFromDiningRoom(){
+        hotel.checkGuestsToDiningRoom(guestGroup1, "Ocean Front");
+        hotel.checkGuestsToDiningRoom(guestGroup2, "Ocean Front");
+        hotel.checkGuestOutFromDiningRoom("Ocean Front", guest3);
+        assertEquals(3, hotel.getDiningRoomSpace("Ocean Front"));
     }
 
 
