@@ -58,7 +58,7 @@ public class Bedroom extends Room {
             System.out.println("THE ROOM IS FULL, PLEASE CHOOSE ANOTHER ROOM");
     }
 
-
+    @Override
     public ArrayList<Guest> checkOutGuests() {
         this.isbooked = false;
         bookingLength = 0;
