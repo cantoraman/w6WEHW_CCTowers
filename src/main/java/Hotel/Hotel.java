@@ -130,4 +130,14 @@ public class Hotel {
             }
         }
     }
+
+    public void showDiningGuestList() {
+        for (DiningRoom diningRoom : diningRooms){
+
+            for (Guest guest : diningRoom.getGuestsIn())
+            {
+                System.out.println(guest.getName() + " " + diningRoom.getName());
+            }
+        }
+    }
 }

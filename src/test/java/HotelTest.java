@@ -143,6 +143,7 @@ public class HotelTest {
         hotel.checkGuestsToBedroom(guestGroup2,103, 3);
         hotel.showBedroomsGuestList();
     }
+
     @Test
     public void canShowGuestList__conferenceRooms(){
         hotel.checkGuestsToConferenceRoom(guestGroup1, "Savoy Court");
@@ -150,14 +151,14 @@ public class HotelTest {
         hotel.showConferenceGuestList();
     }
 
+    @Test
+    public void canShowGuestList__diningRooms(){
+        hotel.checkGuestsToDiningRoom(guestGroup1, "Ocean Front");
+        hotel.checkGuestsToDiningRoom(guestGroup2, "Maison Blanc");
+        hotel.showDiningGuestList();
+    }
 
-//    @Test
-//    public void canCheckInGuests_toRoomsToDiningRoomCheckGuestOutCheckInDiningRoom(){
-//        hotel.checkGuestsToBedroom(guestGroup1,102,3);
-//        hotel.checkGuestsToDiningRoom(guestGroup1,"Maison Blanc");
-//        hotel.checkGuestsToConferenceRoom(guestGroup1, "Savoy Court");
-//
-//        assertEquals(2, hotel.getGuestNumberInBedroom(102));
-//    }
+
+
 
 }
