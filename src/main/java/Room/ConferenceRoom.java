@@ -1,5 +1,9 @@
 package Room;
 
+import Hotel.Guest;
+
+import java.util.ArrayList;
+
 public class ConferenceRoom extends Room{
 
     private boolean isbooked;
@@ -32,5 +36,23 @@ public class ConferenceRoom extends Room{
     public int getRate() {
         return this.rate;
     }
+
+    public String getConferenceRoomName() {
+        return this.roomName;
+    }
+
+
+    public void checkInGuests(ArrayList<Guest> guestsToCheckIn) {
+        if (guestsToCheckIn.size() + this.getCheckedInCapacity() <= getCapacity()) {
+
+            for (Guest guest : guestsToCheckIn) {
+                guestsIn.add(guest);
+            }
+
+        } else
+            System.out.println("NOT ENOUGH ROOM");
+    }
+
+
 }
 

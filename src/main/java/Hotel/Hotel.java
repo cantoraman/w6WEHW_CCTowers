@@ -69,4 +69,27 @@ public class Hotel {
         }
         return 0;
     }
+
+    public void checkGuestsToConferenceRoom(ArrayList<Guest> guestGroup, String conferenceRoomName) {
+        for (ConferenceRoom conferenceRoom : conferenceRooms)
+        {
+            if (conferenceRoomName  == conferenceRoom.getConferenceRoomName())
+                conferenceRoom.checkInGuests(guestGroup);
+        }
+    }
+
+    public int getGuestNumberInConferenceRoom(String conferenceRoomName) {
+        for (ConferenceRoom conferenceRoom : conferenceRooms)
+        {
+            if (conferenceRoom.getConferenceRoomName()== conferenceRoomName)
+                return conferenceRoom.getCheckedInCapacity();
+        }
+        return 0;
+    }
+
+    public void checkGuestsOutFromBedroom(int roomNumber) {
+        for (Bedroom bedroom : bedrooms)
+            if(bedroom.getRoomNumber() == roomNumber)
+                bedroom.checkOutGuests();
+    }
 }

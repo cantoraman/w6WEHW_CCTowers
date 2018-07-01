@@ -81,7 +81,7 @@ public class HotelTest {
     }
 
     @Test
-    public void canCheckInGuests__toNonAvailableBedrooms() {
+    public void canCheckInGuests__toUnvailableBedrooms() {
         hotel.checkGuestsToBedroom(guestGroup1, 101, 3);
         assertEquals(0, hotel.getGuestNumberInBedroom(101));
     }
@@ -93,7 +93,7 @@ public class HotelTest {
     }
 
     @Test
-    public void canCheckInGuests__toNonAvailableDiningRooms() {
+    public void canCheckInGuests__toUnavailableDiningRooms() {
         diningRoom1.setCapacity(3);
         hotel.checkGuestsToDiningRoom(guestGroup1, "Ocean Front");
         hotel.checkGuestsToDiningRoom(guestGroup2, "Ocean Front");
@@ -101,15 +101,35 @@ public class HotelTest {
     }
 
     @Test
-    public void canBookAConferenceRoom(){
-
+    public void canCheckInGuests__toAvailableConferenceRooms(){
+        hotel.checkGuestsToConferenceRoom(guestGroup1, "Savoy Court");
+        assertEquals(2, hotel.getGuestNumberInConferenceRoom("Savoy Court"));
     }
 
+    @Test
+    public void canCheckInGuests__toUnavailableConferenceRooms(){
+        conferenceRoom1.setCapacity(3);
+        hotel.checkGuestsToConferenceRoom(guestGroup1, "Savoy Court");
+        hotel.checkGuestsToConferenceRoom(guestGroup2, "Savoy Court");
+        assertEquals(2, hotel.getGuestNumberInConferenceRoom("Savoy Court"));
+    }
 
 
     @Test
-    public void canCheckInGuests_toRoomsToDiningRoomCheckGuestOutCheckInDiningRoom(){
-
+    public void canCheckOutGuestsFromBedroom(){
+        hotel.checkGuestsToBedroom(guestGroup1,102, 3);
+        hotel.checkGuestsOutFromBedroom(102);
+        assertEquals(0, hotel.getGuestNumberInBedroom(102));
     }
+
+
+//    @Test
+//    public void canCheckInGuests_toRoomsToDiningRoomCheckGuestOutCheckInDiningRoom(){
+//        hotel.checkGuestsToBedroom(guestGroup1,102,3);
+//        hotel.checkGuestsToDiningRoom(guestGroup1,"Maison Blanc");
+//        hotel.checkGuestsToConferenceRoom(guestGroup1, "Savoy Court");
+//
+//        assertEquals(2, hotel.getGuestNumberInBedroom(102));
+//    }
 
 }
