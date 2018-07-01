@@ -54,5 +54,8 @@ public class ConferenceRoom extends Room{
     }
 
 
+    public String getName() {
+        return roomName;
+    }
 }
 

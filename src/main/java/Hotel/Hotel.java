@@ -100,4 +100,12 @@ public class Hotel {
                 diningRoom.checkOutGuestByName(guest);
         }
     }
+
+
+    public void checkGuestOutFromConferenceRoom(String conferenceRoomName, Guest guest) {
+        for (ConferenceRoom conferenceRoom : conferenceRooms) {
+            if (conferenceRoom.getName() == conferenceRoomName && conferenceRoom.getGuestsIn().contains(guest))
+                conferenceRoom.checkOutGuestByName(guest);
+        }
+    }
 }

@@ -130,6 +130,13 @@ public class HotelTest {
         assertEquals(3, hotel.getDiningRoomSpace("Ocean Front"));
     }
 
+    @Test
+    public void canCheckOutGuestsFromConferenceRoom(){
+        hotel.checkGuestsToConferenceRoom(guestGroup1, "Savoy Court");
+        hotel.checkGuestOutFromConferenceRoom("Savoy Court", guest2);
+        assertEquals(1, hotel.getGuestNumberInConferenceRoom("Savoy Court"));
+    }
+
 
 //    @Test
 //    public void canCheckInGuests_toRoomsToDiningRoomCheckGuestOutCheckInDiningRoom(){
