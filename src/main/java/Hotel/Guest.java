@@ -26,4 +26,8 @@ public class Guest {
     public Allergen getAllergies() {
         return this.allergies;
     }
+
+    public String getName() {
+        return name;
+    }
 }

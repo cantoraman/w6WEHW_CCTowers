@@ -108,4 +108,16 @@ public class Hotel {
                 conferenceRoom.checkOutGuestByName(guest);
         }
     }
+
+    public void showGuestList() {
+
+        for (Bedroom bedroom : bedrooms){
+
+            for (Guest guest : bedroom.getGuestsIn())
+            {
+                System.out.println(guest.getName() + " " + guest.getRoomNumber());
+            }
+        }
+    }
+
 }

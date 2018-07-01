@@ -137,6 +137,13 @@ public class HotelTest {
         assertEquals(1, hotel.getGuestNumberInConferenceRoom("Savoy Court"));
     }
 
+    @Test
+    public void canShowGuestList(){
+        hotel.checkGuestsToBedroom(guestGroup1,102, 3);
+        hotel.checkGuestsToBedroom(guestGroup2,103, 3);
+        hotel.showGuestList();
+    }
+
 
 //    @Test
 //    public void canCheckInGuests_toRoomsToDiningRoomCheckGuestOutCheckInDiningRoom(){
