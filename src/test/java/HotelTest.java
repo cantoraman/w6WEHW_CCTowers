@@ -138,10 +138,16 @@ public class HotelTest {
     }
 
     @Test
-    public void canShowGuestList(){
+    public void canShowGuestList__bedrooms(){
         hotel.checkGuestsToBedroom(guestGroup1,102, 3);
         hotel.checkGuestsToBedroom(guestGroup2,103, 3);
-        hotel.showGuestList();
+        hotel.showBedroomsGuestList();
+    }
+    @Test
+    public void canShowGuestList__conferenceRooms(){
+        hotel.checkGuestsToConferenceRoom(guestGroup1, "Savoy Court");
+        hotel.checkGuestsToConferenceRoom(guestGroup2, "Starlight");
+        hotel.showConferenceGuestList();
     }
 
 

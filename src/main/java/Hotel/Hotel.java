@@ -109,7 +109,7 @@ public class Hotel {
         }
     }
 
-    public void showGuestList() {
+    public void showBedroomsGuestList() {
 
         for (Bedroom bedroom : bedrooms){
 
@@ -120,4 +120,14 @@ public class Hotel {
         }
     }
 
+    public void showConferenceGuestList() {
+
+        for (ConferenceRoom conferenceRoom : conferenceRooms){
+
+            for (Guest guest : conferenceRoom.getGuestsIn())
+            {
+                System.out.println(guest.getName() + " " + conferenceRoom.getConferenceRoomName());
+            }
+        }
+    }
 }
